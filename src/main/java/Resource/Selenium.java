@@ -28,7 +28,7 @@ public class Selenium extends Steps{
     @Given("Open brower")
     public void Open(){
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "D:\\Nghia\\NewCC\\Chrome\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "E:\\JBehave\\SeleniumNewCC\\Chrome\\chromedriver.exe");
             DesiredCapabilities a = DesiredCapabilities.chrome();
             a.setCapability("marionette", true);
             ChromeOptions options = new ChromeOptions();
@@ -58,24 +58,27 @@ public class Selenium extends Steps{
     @When("Open form Newbooking")
     public void formNewbooking (){
 
-        try {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement newBooking = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("menu-addnew")));
+        newBooking.click();
+        /*try {
             Thread.sleep(1800);
             driver.findElement(By.className("menu-addnew")).click();
         }catch(InterruptedException e){
             System.out.println(e);
-        }
+        }*/
     }
     @Then("Input data")
-    public void inputDate(){
+    public void inputDate() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[2]/div[2]/div/input")));
         element.sendKeys("san bay");
-        // // Create an interface WebElement of the div
+        /* // Create an interface WebElement of the div
         WebElement webElement = driver.findElement(By.id("PlacesAutocomplete__autocomplete-container"));
         // Create an IList and intialize it with all the elements of div under div
         List<WebElement> AllCheckBoxes = webElement.findElements(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div"));
-        /*int RowCount = AllCheckBoxes.size();
+        int RowCount = AllCheckBoxes.size();
         // List text with key "san bay"
         for(WebElement ele: AllCheckBoxes) {
             String name = ele.getText();
@@ -88,8 +91,10 @@ public class Selenium extends Steps{
         des.sendKeys("hoang dieu");
         WebElement dest = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div[1]")));
         dest.click();
+
+        WebElement phone = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[8]/div/div/div[1]/div[2]/input")));
+        des.sendKeys("2055550010");
         //WebElement create = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[2]/div[7]/button[1]")));
         //dest.click();
-
     }
 }
