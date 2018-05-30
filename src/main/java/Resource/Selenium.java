@@ -24,6 +24,7 @@ import java.util.List;
 public class Selenium extends Steps{
     public static WebDriver driver = null;
 
+    //Scenario: Login Home
     @Given("Open brower")
     public void Open(){
         if (driver == null) {
@@ -52,11 +53,7 @@ public class Selenium extends Steps{
             System.out.println(e);
         }
     }
-    @Then("QUp New CC Map display")
-    public void Action(String titlel) {
 
-        org.junit.Assert.assertEquals(titlel, driver.getTitle());
-    }
     //Scenario: New Booking
     @When("Open form Newbooking")
     public void formNewbooking (){
@@ -71,21 +68,28 @@ public class Selenium extends Steps{
     @Then("Input data")
     public void inputDate(){
 
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[2]/div[2]/div/input")));
         element.sendKeys("san bay");
         // // Create an interface WebElement of the div
         WebElement webElement = driver.findElement(By.id("PlacesAutocomplete__autocomplete-container"));
         // Create an IList and intialize it with all the elements of div under div
         List<WebElement> AllCheckBoxes = webElement.findElements(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div"));
-        int RowCount = AllCheckBoxes.size();
+        /*int RowCount = AllCheckBoxes.size();
         // List text with key "san bay"
         for(WebElement ele: AllCheckBoxes) {
             String name = ele.getText();
             System.out.println(" List: "+ name);
-        }
+        }*/
         // Select airport locaton 1st
         WebElement air = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div[1]")));
         air.click();
+        WebElement des = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[3]/div[2]/div/input")));
+        des.sendKeys("hoang dieu");
+        WebElement dest = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div[1]")));
+        dest.click();
+        //WebElement create = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[2]/div[7]/button[1]")));
+        //dest.click();
+
     }
 }
