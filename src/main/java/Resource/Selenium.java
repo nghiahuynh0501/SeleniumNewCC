@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -75,10 +76,21 @@ public class Selenium extends Steps{
         add.click();
     }
 
-    //Scenario: Check view add driver
-    @Then("Form driver")
+    //Scenario: input data
+    @Then("Input data")
     public void checkView(){
 
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement phone = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[2]/div[3]/div[2]/div/div/input")));
+        phone.sendKeys("2055550090");
+        WebElement first = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[2]/div[3]/div[3]/input")));
+        first.sendKeys("Driver");
+        WebElement last = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[2]/div[3]/div[4]/input")));
+        first.sendKeys("Test");
+        Select comp = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[1]/div[2]/select"))));
+        comp.selectByIndex(1);
+        WebElement vehicel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"react-select-2--value\"]/div[2]/input")));
+        vehicel.click();
     }
 }
 

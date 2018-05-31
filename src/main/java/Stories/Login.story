@@ -13,5 +13,5 @@ Scenario: Open form Add Driver
 Given Open form Add Driver
 When Open Driver module
 
-Scenario: Check view add driver
-Then Form driver
+Scenario: Input data
+Then Input data
