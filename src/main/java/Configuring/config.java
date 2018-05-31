@@ -29,6 +29,6 @@ public class config extends JUnitStories{
     }
     @Override
     public List<String> storyPaths(){
-        return Arrays.asList("stories/Login.story");
+        return Arrays.asList("Stories/Login.story");
     }
 }

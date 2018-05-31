@@ -22,13 +22,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class Selenium extends Steps{
+
+
     public static WebDriver driver = null;
 
     //Scenario: Login Home
-    @Given("Open brower")
+    @Given("Open browser")
     public void Open(){
+
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "E:\\JBehave\\SeleniumNewCC\\Chrome\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "D:\\Nghia\\SeleniumNewCC\\Chrome\\chromedriver.exe");
             DesiredCapabilities a = DesiredCapabilities.chrome();
             a.setCapability("marionette", true);
             ChromeOptions options = new ChromeOptions();
@@ -43,17 +46,44 @@ public class Selenium extends Steps{
     @When("Navigation website QUp")
     public void Login(){
 
-        try {
-            Thread.sleep(1800);
-            driver.findElement(By.xpath("//*[@id=\"root\"]/div/form/div/div[1]/input")).sendKeys("sony");
-            driver.findElement(By.xpath("//*[@id=\"root\"]/div/form/div/div[2]/input")).sendKeys("Qup@12345");
-            Thread.sleep(1800);
-            driver.findElement(By.xpath("//*[@id=\"root\"]/div/form/div/button")).click();
-        } catch (InterruptedException e) {
-            System.out.println(e);
-        }
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebElement user = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/form/div/div[1]/input")));
+        user.sendKeys("sony");
+        WebElement pw = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/form/div/div[2]/input")));
+        pw.sendKeys("Qup@12345");
+        WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/form/div/button")));
+        login.click();
     }
 
+
+    //Scenario: Login Driver
+    @Given("Open form Add Driver")
+    public void openDrivermoduel(){
+
+        try {
+            Thread.sleep(1800);
+            driver.get("https://cclite.lab.qup.vn/driver");
+        }catch (InterruptedException e){
+            System.out.println("Failed");
+        }
+    }
+    @When ("Open Driver module")
+    public void clickAdd(){
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement add = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div[1]/button[1]")));
+        add.click();
+    }
+
+    //Scenario: Check view add driver
+    @Then("Form driver")
+    public void checkView(){
+
+    }
+}
+
+
+    /*
     //Scenario: New Booking
     @When("Open form Newbooking")
     public void formNewbooking (){
@@ -61,20 +91,20 @@ public class Selenium extends Steps{
         WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement newBooking = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("menu-addnew")));
         newBooking.click();
-        /*try {
+        try {
             Thread.sleep(1800);
             driver.findElement(By.className("menu-addnew")).click();
         }catch(InterruptedException e){
             System.out.println(e);
-        }*/
+        }
     }
     @Then("Input data")
     public void inputDate() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[2]/div[2]/div/input")));
         element.sendKeys("san bay");
-        /* // Create an interface WebElement of the div
+         // Create an interface WebElement of the div
         WebElement webElement = driver.findElement(By.id("PlacesAutocomplete__autocomplete-container"));
         // Create an IList and intialize it with all the elements of div under div
         List<WebElement> AllCheckBoxes = webElement.findElements(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div"));
@@ -83,7 +113,7 @@ public class Selenium extends Steps{
         for(WebElement ele: AllCheckBoxes) {
             String name = ele.getText();
             System.out.println(" List: "+ name);
-        }*/
+        }
         // Select airport locaton 1st
         WebElement air = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div[1]")));
         air.click();
@@ -92,9 +122,8 @@ public class Selenium extends Steps{
         WebElement dest = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"PlacesAutocomplete__autocomplete-container\"]/div[1]")));
         dest.click();
 
-        WebElement phone = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[8]/div/div/div[1]/div[2]/input")));
+        WebElement phone = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[1]/div[9]/div/input")));
         des.sendKeys("2055550010");
         //WebElement create = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/span/div/div[2]/div[7]/button[1]")));
         //dest.click();
-    }
-}
+    }*/

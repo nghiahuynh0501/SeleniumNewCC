@@ -6,9 +6,9 @@ I want to perform an action
 So that I can achieve a business goal
 
 Scenario: Login Home
-Given Open brower
+Given Open browser
 When Navigation website QUp
 
-Scenario: New Booking
-When Open form Newbooking
-Then Input data
+Scenario: Login Driver
+Given Open form Driver module
+When Navigation

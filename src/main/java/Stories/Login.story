@@ -6,9 +6,12 @@ I want to perform an action
 So that I can achieve a business goal
 
 Scenario: Login Home
-Given Open brower
+Given Open browser
 When Navigation website QUp
 
-Scenario: New Booking
-When Open form Newbooking
-Then Input data
+Scenario: Open form Add Driver
+Given Open form Add Driver
+When Open Driver module
+
+Scenario: Check view add driver
+Then Form driver
