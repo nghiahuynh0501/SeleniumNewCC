@@ -6,10 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c56235e4-04bb-448f-b609-f891fb834fc1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Resource/Selenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Resource/Selenium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Stories/Login.story" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stories/Login.story" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Resource/Selenium.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stories/Login.story" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stories/Login.story" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/AfterStories.stats" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/AfterStories.stats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/BeforeStories.stats" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/BeforeStories.stats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/stories.Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/stories.Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/stories.Login.stats" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/stories.Login.stats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/storyDurations.props" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/storyDurations.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/AfterStories.stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/AfterStories.stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/BeforeStories.stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/BeforeStories.stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/stories.Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/stories.Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jbehave/view/stories.Login.stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jbehave/view/stories.Login.stats.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,8 +44,8 @@
       <file leaf-file-name="config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Configuring/config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="374">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +56,11 @@
       <file leaf-file-name="Selenium.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Resource/Selenium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+            <state relative-caret-position="510">
+              <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,6 +116,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,8 +176,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -284,43 +297,44 @@
       <workItem from="1527753802570" duration="9000" />
       <workItem from="1527757363997" duration="174000" />
       <workItem from="1527758185592" duration="135000" />
+      <workItem from="1527841281400" duration="6477000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="config - 2018.05.31 at 13h 56m 51s.xml">
+    <history-entry file="config - 2018.06.01 at 16h 51m 13s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 13h 57m 57s.xml">
+    <history-entry file="config - 2018.06.01 at 16h 52m 43s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 13h 58m 38s.xml">
+    <history-entry file="config - 2018.06.01 at 16h 56m 34s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 13h 59m 56s.xml">
+    <history-entry file="config - 2018.06.01 at 16h 58m 00s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 14h 00m 25s.xml">
+    <history-entry file="config - 2018.06.01 at 16h 58m 37s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 14h 32m 13s.xml">
+    <history-entry file="config - 2018.06.01 at 17h 01m 03s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 14h 36m 26s.xml">
+    <history-entry file="config - 2018.06.01 at 17h 02m 14s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 14h 37m 17s.xml">
+    <history-entry file="config - 2018.06.01 at 17h 04m 50s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 14h 51m 26s.xml">
+    <history-entry file="config - 2018.06.01 at 17h 08m 28s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="config - 2018.05.31 at 16h 18m 32s.xml">
+    <history-entry file="config - 2018.06.01 at 17h 09m 34s.xml">
       <configuration name="config" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28193000" />
+    <option name="totallyTimeSpent" value="34670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -334,8 +348,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021962" side_tool="true" weight="0.3290938" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978038" weight="0.3286517" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -346,8 +360,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39981273" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32958803" />
@@ -366,10 +380,37 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Stories/Login.story">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="7" selection-start-line="15" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Configuring/config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Resource/Selenium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Stories/Login.story">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -617,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Configuring/config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="374">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -627,8 +668,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Resource/Selenium.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

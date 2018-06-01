@@ -13,6 +13,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,7 +22,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 
+import java.security.Key;
 import java.util.List;
+import java.util.Scanner;
 
 public class Selenium extends Steps{
 
@@ -86,11 +90,21 @@ public class Selenium extends Steps{
         WebElement first = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[2]/div[3]/div[3]/input")));
         first.sendKeys("Driver");
         WebElement last = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[2]/div[3]/div[4]/input")));
-        first.sendKeys("Test");
+        last.sendKeys("Test");
         Select comp = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"page-content\"]/div/div/div/div[1]/div[2]/select"))));
-        comp.selectByIndex(1);
-        WebElement vehicel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"react-select-2--value\"]/div[2]/input")));
+        comp.selectByIndex(2);
+        WebElement vehicel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"react-select-2--value\"]")));
         vehicel.click();
+        //driver.findElement(By.cssSelector("Body")).sendKeys(Keys.DOWN);
+        Actions action = new Actions(driver);
+        action.keyUp(Keys.CONTROL).sendKeys(Keys.ENTER).build().perform();
+        Select zone = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"formControlsSelectMultiple\"]"))));
+        zone.selectByIndex(1);
+        Select shif = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"formControlsSelectMultiple\"]"))));
+        shif.selectByIndex(1);
+        WebElement active = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("//*[@id=\"page-content\"]/div/div/div/div[1]/div[20]")));
+        active.click();
+
     }
 }
 
